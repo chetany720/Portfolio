@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mode: dark;
+}
+
+/* Theme: Vibrant Dark with Colorful Accents */
+@layer base {
+  :root {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 271 81% 56%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 271 81% 56%;
+    --chart-1: 271 81% 56%;
+    --chart-2: 262 83% 58%;
+    --chart-3: 221 83% 53%;
+    --chart-4: 142 76% 36%;
+    --chart-5: 346 87% 43%;
+    --radius: 0.75rem;
+  }
+  
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 271 81% 56%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 271 81% 56%;
+    --chart-1: 271 81% 56%;
+    --chart-2: 262 83% 58%;
+    --chart-3: 221 83% 53%;
+    --chart-4: 142 76% 36%;
+    --chart-5: 346 87% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(222, 84%, 4.9%) 0%, hsl(217, 32%, 17%) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(271, 81%, 56%) 0%, hsl(262, 83%, 58%) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(271, 81%, 56%) 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(346, 87%, 43%) 100%);
+  }
+  
+  .gradient-success {
+    background: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(221, 83%, 53%) 100%);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(135deg, hsl(271, 81%, 56%) 0%, hsl(262, 83%, 58%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-secondary {
+    background: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(271, 81%, 56%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(222, 84%, 4.9%), hsl(222, 84%, 4.9%)) padding-box,
+                linear-gradient(135deg, hsl(271, 81%, 56%), hsl(262, 83%, 58%)) border-box;
+  }
+  
+  .card-gradient {
+    background: linear-gradient(135deg, 
+      hsla(222, 84%, 4.9%, 0.8) 0%, 
+      hsla(217, 32%, 17%, 0.6) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(271, 81%, 56%, 0.2);
+  }
+  
+  .glow-primary {
+    box-shadow: 0 0 20px hsla(271, 81%, 56%, 0.3);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 0 20px hsla(262, 83%, 58%, 0.3);
+  }
+}
